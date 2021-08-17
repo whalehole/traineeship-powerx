@@ -81,6 +81,7 @@ const Form = () => {
                         <div key={job.id}>
                             <p><span style={{fontWeight:"bold"}}>{job.jobTitle}</span> in {job.department}</p>
                             <p>Level: {job.level.charAt(0).toUpperCase() + job.level.slice(1)}</p>
+                            <p>Summary: {job.summary}</p>
                             <button onClick={()=>{handleDelete(job.id)}}>Delete</button>
                         </div>
                     )
