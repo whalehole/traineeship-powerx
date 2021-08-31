@@ -28,7 +28,7 @@ export default function Marketplace() {
     }
     // if (useAuth().status === "guest") {return <LoginPage />}
 
-    return useAuth().status === "guest" ? 
+    return useAuth().status !== "authenticated" ? 
     <LoginPage /> 
     :
     <div className="min-w-big-1">
