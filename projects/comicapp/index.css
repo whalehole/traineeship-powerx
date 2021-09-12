@@ -1,0 +1,67 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media only screen and (min-width: 640px) {
+    .container-screen {
+        width: 640px;
+    }
+}
+@media only screen and (min-width: 760px) {
+    .container-screen {
+        width: 760px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .container-screen {
+        width: 1024px;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .container-screen {
+        width: 1280px;
+    }
+}
+@media only screen and (min-width: 1536px) {
+    .container-screen {
+        width: 1536px;
+    }
+}
+.container-screen {
+    margin: auto;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.flex-container-comics {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    height: 600px;
+}
+.container-comic {
+    width: 100%;
+    max-width: 350px;
+}
+.gap-1 {
+    gap:300px;
+}
+.fit-container-image {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+.loader {
+    object-fit: cover;
+    width: 500px;
+    height: 200px;
+    position: fixed;
+    bottom: 20%;
+}
+.hidden {
+    display: none;
+}

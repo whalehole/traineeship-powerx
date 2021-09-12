@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>comicapp</title>
+        <link href="index.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="root">
+            <div class="container-screen">
+                <div class="flex-container">
+                    <label for="numComicsOption">VIEW MODE:</label>
+                    <select name="numComics" id="numComicsOption">
+                        <option value="1">1 comic</option>
+                        <option value="3">3 comics</option>
+                        <option value="5">5 comics</option>
+                    </select>
+                </div>
+                <div id="comicsContainer" class="flex-container-comics">
+                </div>
+                <div class="flex-container gap-1">
+                    <button id="prevButt">PREV</button>
+                    <div>
+                        <form>
+                            <button id="randomizeButton" type="button">RANDOM</button>
+                            <input id="comicNumInput" type="number" min="1" oninput="validity.valid||(value='');" placeholder="comic #" required/>
+                            <button id="comicNumSubmit" type="submit">GO</button>
+                        </form>
+                    </div>
+                    <button id="nextButt">NEXT</button>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
