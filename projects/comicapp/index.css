@@ -1,8 +1,3 @@
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
 @media only screen and (min-width: 640px) {
     .container-screen {
         width: 640px;

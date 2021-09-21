@@ -1,5 +1,5 @@
 (()=>{
-    // loader element
+    // create loader element
     const loader = document.createElement('img');
     loader.classList.add('hidden');
     loader.classList.add("loader");
@@ -19,6 +19,7 @@
         let loading = 1;
         // loader
         loader.classList.remove('hidden');
+        // create display cards
         for (let i = 1; i <= num; i++) {
             const comic = document.createElement("div");
             comic.classList.add("container-comic");
@@ -43,9 +44,8 @@
                 info.append(title);
                 const descript = document.createTextNode(`Description: ${data.alt}`);
                 info.append(descript);
-
                 viewer.append(info);
-
+                // hide loader
                 if (loading == num) {
                     loader.classList.add("hidden");
                 } else {loading++};
@@ -81,10 +81,11 @@
     randomizeButton.addEventListener("click", (e)=>{
         currentComic = appendComic((Math.floor(Math.random() * 2500) + 1), numComicsOption.value, comicContainer);
     })
-    // on forward or backward
+    // on forward
     prevButt.addEventListener("click", (e)=>{
         currentComic = appendComic(currentComic-parseInt(numComicsOption.value), numComicsOption.value, comicContainer);
     })
+    // on backward
     nextButt.addEventListener("click", (e)=>{
         currentComic = appendComic(currentComic+parseInt(numComicsOption.value), numComicsOption.value, comicContainer);
     })
