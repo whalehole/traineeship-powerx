@@ -1,4 +1,9 @@
 (()=>{
+    // loader element
+    const loader = document.createElement('img');
+    loader.classList.add('hidden');
+    loader.classList.add("loader");
+    loader.src = "https://thumbs.gfycat.com/CaringSpryAlbertosaurus-size_restricted.gif";
     // fetch comic
     const getComic = (id) => 
     fetch(`https://intro-to-js-playground.vercel.app/api/xkcd-comics/${id}`)
@@ -13,11 +18,7 @@
         comicContainer.replaceChildren();
         let loading = 1;
         // loader
-        const loader = document.createElement('img');
-        loader.classList.add("loader");
-        loader.src = "https://thumbs.gfycat.com/CaringSpryAlbertosaurus-size_restricted.gif";
-        parent.append(loader);
-        // build viewers for comics
+        loader.classList.remove('hidden');
         for (let i = 1; i <= num; i++) {
             const comic = document.createElement("div");
             comic.classList.add("container-comic");
@@ -65,6 +66,7 @@
     let nextButt = document.querySelector("#nextButt");
     let currentComic = 1;
     appendComic(currentComic, 1, comicContainer);
+    document.querySelector('#root').append(loader);
     // on selecting specific comic -> expect only 1 result else error
     comicNumSubmit.addEventListener("click", (e)=>{
         e.preventDefault();
